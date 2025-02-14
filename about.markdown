@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 ---
 # Hi! I'm Luke Klein 
+
 ## Data Scientist at Large
 
 I started out teaching statistics at UC Riverside, where I got to revamp the department's computing curriculum, before jumping into global health work at FHI 360. There, I built data pipelines, created custom visualizations, and published research on disease surveillance using geospatial modeling. These days, I work with R, Python, and advanced stats to turn complex data into clear insights.
@@ -13,7 +14,7 @@ What gets me excited? Diving into messy datasets and making them tell their stor
  I am looking to join a data science team where I can put my stats and pipeline skills to work while continuing to grow as a Data Scientist and Statistician alongside collaborative colleagues.
 
  ## My Skills
- 
+
  ### Technical Skills
 
 {% include technicalskills.md %}
