@@ -3,7 +3,7 @@ soft:
    level: Intermediate
  - title: Leadership
    level: Intermediate
-
+   
 programming:
  - title: R
    level: Advanced
@@ -13,6 +13,8 @@ programming:
    level: Beginner
  - title: Python
    level: Biginner
+ - title: GIT
+   level: Intermediate
 
 mlstats:
  - title: Regression
