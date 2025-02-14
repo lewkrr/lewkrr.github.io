@@ -3,6 +3,8 @@ soft:
    level: Intermediate
  - title: Leadership
    level: Intermediate
+ - title: Collaboration
+   level: Advanced
    
 programming:
  - title: R
