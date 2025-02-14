@@ -1,15 +1,35 @@
-technical:
- - title: R
-   level: Advanced
- - title: Statistical Modeling
-   level: Intermediate
- - title: JavaScrpt
-   level: Advanced
- - title: ReactJS
-   level: Advanced
-
 soft:
  - title: Writing
    level: Intermediate
  - title: Leadership
    level: Intermediate
+
+programming:
+ - title: R
+   level: Advanced
+ - title: SQL
+   level: Beginner
+ - title: Python
+   level: Biginner
+ - title: SAS
+   level: Intermediate
+
+mlstats:
+ - title: Regression
+   level: linear, logistic, GLM, mixed-effects, model selection
+ - title: Experimental Design
+   level: repeated measures, matched pairs, quasi-experimental, factorial
+ - title: Hypothesis Testing
+   level: power, sample size, MVUE, likelihood ratio
+ - title: Classification & Clustering
+   level: unsupervised, support vector, trees
+ - title: Causal Inference
+   level: RCT, propensity score matching, difference-in-differences
+
+datavis:
+ - title: ggplot2
+   level: Advanced
+ - title: Tableau
+   level: Beginner
+ - title: Power BI
+   level: Beginner
