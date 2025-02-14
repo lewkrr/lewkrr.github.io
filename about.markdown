@@ -1,18 +1,14 @@
 ---
-layout: page
+layout: archive
 title: About
 permalink: /about/
 ---
+# Hi! I'm Luke Klein - Data Scientist at Large
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I started out teaching statistics at UC Riverside, where I got to revamp the department's computing curriculum, before jumping into global health work at FHI 360. There, I built data pipelines and published research on disease surveillance using geospatial modeling. These days, I work with R, Python, and advanced stats to turn complex data into clear insights.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+What gets me excited? Diving into messy datasets and making them tell their story. I love teaching others to code and solving tough problems as part of a team. It's amazing to see colleagues light up when they crack their first data challenge.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Looking to join a data science team where I can put my stats and pipeline skills to work while growing as a Data Scientist and Statistician alongside collaborative colleagues.
 
 
-[jekyll-organization]: https://github.com/jekyll
