@@ -1,4 +1,4 @@
-| Data Viz & Dashboards | Level |
+| Skill | Level |
 | ---- | ---- |
 {% assign skills = site.data.skills.soft | sort: "title" -%}
 {% for skill in skills -%}

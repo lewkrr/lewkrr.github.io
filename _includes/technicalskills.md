@@ -1,4 +1,4 @@
-| Machine Learning & Modeling |  |
+| Machine Learning |  |
 | ---- | ---- |
 {% assign skills = site.data.skills.mlstats -%}
 {% for skill in skills -%}

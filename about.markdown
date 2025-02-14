@@ -14,10 +14,10 @@ What gets me excited? Diving into messy datasets and making them tell their stor
 
 ## My Skills
 
-### Soft Skills
-
-{% include softskills.md %}
-
 ### Technical Skills
 
 {% include technicalskills.md %}
+
+### Soft Skills
+
+{% include softskills.md %}
