@@ -7,12 +7,12 @@ soft:
 programming:
  - title: R
    level: Advanced
+ - title: SAS
+   level: Intermediate
  - title: SQL
    level: Beginner
  - title: Python
    level: Biginner
- - title: SAS
-   level: Intermediate
 
 mlstats:
  - title: Regression
