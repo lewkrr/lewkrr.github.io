@@ -13,10 +13,11 @@ What gets me excited? Diving into messy datasets and making them tell their stor
  I am looking to join a data science team where I can put my stats and pipeline skills to work while continuing to grow as a Data Scientist and Statistician alongside collaborative colleagues.
 
  ## My Skills
+ 
  ### Technical Skills
 
 {% include technicalskills.md %}
 
  ### Soft Skills
- 
+
  {% include softskills.md %}
