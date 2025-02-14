@@ -11,14 +11,14 @@ programming:
    level: Advanced
  - title: SAS
    level: Intermediate
- - title: SQL
-   level: Beginner
- - title: Python
-   level: Biginner
  - title: GIT
    level: Intermediate
  - title: BASH
    level: Intermediate
+ - title: SQL
+   level: Beginner
+ - title: Python
+   level: Beginner
 
 mlstats:
  - title: Regression
