@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+    <title>Luke Kleinn - Hello R Markdown! </title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.161ac29527340fe6cd42d0fe020b4b1fb8ece483017235511148094a3c06372f.css">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+<header class="page-header">
+    <div class="myname"> 
+        <h2><a href="//localhost:4321/"></a></h2> 
+    </div>
+    <nav>
+        <ul class="navbar">
+            <li class="">
+                <a href="/about/">
+                    <span>About</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="https://github.com/lewkrr">
+                    <span>GitHub</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="/">
+                    <span>Luke Klein</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="https://twitter.com/rstudio">
+                    <span>Twitter</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <main>
+        <article>
+            
+            <h1 class="page-title blog">Hello R Markdown!</h1>
+            
+                <p class="blog-post-info">Posted: <time>2020-12-01</time>
+                
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Categories:
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/categories/r">R</a>
+    </span>
+
+
+
+    <span class="blog-taxonomy-info"> &nbsp; | &nbsp; Tags: 
+        
+        
+        
+        <a class="blog-taxonomy-info" href="/tags/plot">plot</a>, <a class="blog-taxonomy-info" href="/tags/r-markdown">R Markdown</a>, <a class="blog-taxonomy-info" href="/tags/regression">regression</a>
+    </span>
+
+</p>
+
+                <div class="blog-post-content">
+                <h1 id="r-markdown">R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre><code class="language-r">summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+</code></pre>
+<pre><code class="language-r">fit &lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932
+</code></pre>
+<h1 id="including-plots">Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
+<pre><code class="language-r">par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+</code></pre>
+<div class="figure">
+<img src="/2020/12/01/hello-r-markdown/index_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<p class="caption"><span id="fig:pie"></span>Figure 1: A fancy pie chart.</p>
+</div>
+<pre><code class="language-r">summary(Orange)
+##  Tree       age         circumference  
+##  3:7   Min.   : 118.0   Min.   : 30.0  
+##  1:7   1st Qu.: 484.0   1st Qu.: 65.5  
+##  5:7   Median :1004.0   Median :115.0  
+##  2:7   Mean   : 922.1   Mean   :115.9  
+##  4:7   3rd Qu.:1372.0   3rd Qu.:161.5  
+##        Max.   :1582.0   Max.   :214.0
+</code></pre>
+<img src="/2020/12/01/hello-r-markdown/index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+                </div>
+                
+            
+        </article>
+    </main>
+
+        </div><footer>
+    <span></span>
+</footer>
+</body>
+</html>

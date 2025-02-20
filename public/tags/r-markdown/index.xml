@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Luke Kleinn</title>
+        <link>//localhost:4321/tags/r-markdown/</link>
+        <description>Latest blog posts from Luke Kleinn</description>
+
+        
+        <language>en-US</language>
+        
+
+        
+
+        
+
+        
+
+        
+        <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate>
+        
+
+        
+        <atom:link href="//localhost:4321/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+        
+
+        
+            
+        <item>
+          <title>Test post 250219</title>
+          <link>//localhost:4321/2025/02/19/test-post-250219/</link>
+          <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+          
+          <guid>//localhost:4321/2025/02/19/test-post-250219/</guid>
+          <description></description>
+        </item>
+            
+        <item>
+          <title>Hello R Markdown!</title>
+          <link>//localhost:4321/2020/12/01/hello-r-markdown/</link>
+          <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+          
+          <guid>//localhost:4321/2020/12/01/hello-r-markdown/</guid>
+          <description><h1 id="r-markdown">R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre><code class="language-r">summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+</code></pre>
+<pre><code class="language-r">fit &lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932
+</code></pre>
+<h1 id="including-plots">Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p></description>
+        </item>
+            
+        <item>
+          <title>A Plain Markdown Post</title>
+          <link>//localhost:4321/2016/12/30/a-plain-markdown-post/</link>
+          <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
+          
+          <guid>//localhost:4321/2016/12/30/a-plain-markdown-post/</guid>
+          <description><p>This is a post written in plain Markdown (<code>*.md</code>) instead of R Markdown (<code>*.Rmd</code>). The major differences are:</p>
+<ol>
+<li>You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (<code>```{r}</code>);</li>
+<li>A plain Markdown post is rendered through <a href="https://gohugo.io/overview/configuration/">Blackfriday</a>, and an R Markdown document is compiled by <a href="http://rmarkdown.rstudio.com"><strong>rmarkdown</strong></a> and <a href="http://pandoc.org">Pandoc</a>.</li>
+</ol>
+<p>There are many differences in syntax between Blackfriday&rsquo;s Markdown and Pandoc&rsquo;s Markdown. For example, you can write a task list with Blackfriday but not with Pandoc:</p></description>
+        </item>
+            
+        <item>
+          <title>Lorem Ipsum</title>
+          <link>//localhost:4321/2015/01/01/lorem-ipsum/</link>
+          <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
+          
+          <guid>//localhost:4321/2015/01/01/lorem-ipsum/</guid>
+          <description><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <em>magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+        </item>
+            
+        
+    </channel>
+</rss>

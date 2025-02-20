@@ -1,0 +1,205 @@
+{{ $page := . }}
+
+{{ $authors := $page.Param "paige.feeds.atom.authors" }}
+{{ $date := "2006-01-02T15:04:05Z07:00" }}
+{{ $description := cond $page.IsHome ($page.Param "paige.site.description") $page.Description | markdownify | plainify | htmlUnescape }}
+{{ $icon := $page.Param "paige.feeds.atom.icon" | absLangURL }}
+{{ $id := printf "tag:%s,%s:%s" (urls.Parse site.BaseURL).Host (.PublishDate.Format "2006-01-02") .RelPermalink }}
+{{ $language := site.LanguageCode }}
+{{ $limit := site.Config.Services.RSS.Limit }}
+{{ $logo := $page.Param "paige.feeds.atom.logo" | absLangURL }}
+{{ $rights := site.Copyright | markdownify }}
+{{ $subpages := $page.RegularPagesRecursive.ByPublishDate }}
+
+{{ $lastmod := site.Lastmod.Format $date }}
+
+{{ if gt $limit 0 }}
+    {{ $subpages = first $limit $subpages }}
+{{ end }}
+
+{{ $titles := slice }}
+
+{{ if $page.IsHome }}
+    {{ $titles = slice (site.Title | default $page.Title | markdownify | plainify | htmlUnescape) }}
+{{ else }}
+    {{ with $page.Title }}
+        {{ $titles = slice (. | markdownify | plainify | htmlUnescape) }}
+    {{ end }}
+
+    {{ range .Ancestors }}
+        {{ $title := cond .IsHome (site.Title | default .Title) .Title }}
+
+        {{ with $title }}
+            {{ $titles = $titles | append (. | markdownify | plainify | htmlUnescape) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ $title := delimit $titles " · " }}
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed {{ with $language }} xml:lang="{{ . }}" {{ end }} xmlns="http://www.w3.org/2005/Atom">
+    {{ range $authors }}
+        <author>
+            {{ with .email }}
+                <email>{{ . }}</email>
+            {{ end }}
+
+            {{ with .name }}
+                <name>{{ . }}</name>
+            {{ end }}
+
+            {{ with .url }}
+                <uri>{{ . }}</uri>
+            {{ end }}
+        </author>
+    {{ end }}
+
+    {{ with $icon }}
+        <icon>{{ . }}</icon>
+    {{ end }}
+
+    {{ with $id }}
+        <id>{{ . }}</id>
+    {{ end }}
+
+    {{ range $page.OutputFormats }}
+        {{ $kind := not (hasSuffix .Permalink "/paige-search.json") }}
+        {{ $rel := cond (eq .Rel "canonical") "self" .Rel }}
+
+        {{ $valid := in (slice "alternate" "enclosure" "related" "self" "via") $rel }}
+
+        {{ if and $kind $valid }}
+            <link href="{{ .Permalink }}" hreflang="{{ $page.Language.LanguageCode }}" rel="{{ $rel }}" type="{{ .MediaType }}"/>
+        {{ end }}
+    {{ end }}
+
+    {{ range $t := $page.Translations }}
+        {{ range .OutputFormats }}
+            {{ $kind := not (hasSuffix .Permalink "/paige-search.json") }}
+            {{ $valid := in (slice "alternate" "enclosure" "related" "self" "via") .Rel }}
+
+            {{ if and $kind $valid }}
+                <link href="{{ .Permalink }}" hreflang="{{ $t.Language.LanguageCode }}" rel="{{ .Rel }}" type="{{ .MediaType }}"/>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ with $logo }}
+        <logo>{{ . }}</logo>
+    {{ end }}
+
+    {{ with $rights }}
+        <rights type="html"><![CDATA[{{ . }}]]></rights>
+    {{ end }}
+
+    {{ with $description }}
+        <subtitle type="html"><![CDATA[{{ . }}]]></subtitle>
+    {{ end }}
+
+    {{ with $title }}
+        <title type="html"><![CDATA[{{ . }}]]></title>
+    {{ end }}
+
+    {{ with $lastmod }}
+        <updated>{{ . }}</updated>
+    {{ end }}
+
+    {{ range $subpage := $subpages }}
+        {{ if not (.Param "paige.exclude_feeds") }}
+            <entry>
+                {{ $content := .Content }}
+                {{ $external := and .Params.link (not (.Param "paige.feeds.disable_link")) | not | not }}
+                {{ $id := printf "tag:%s,%s:%s" (urls.Parse site.BaseURL).Host (.PublishDate.Format "2006-01-02") .RelPermalink }}
+                {{ $lastmod := .Lastmod.Format $date }}
+                {{ $published := cond (not .PublishDate.IsZero) (.PublishDate.Format $date) "" }}
+                {{ $summary := markdownify .Description }}
+                {{ $title := markdownify .Title }}
+
+                {{ $link := cond $external .Params.link .Permalink }}
+
+                {{ if and $content $external }}
+                    {{ $text := or (.Param "paige.feeds.page_link" | markdownify) "⏎" }}
+
+                    {{ $footer := printf `<p><a href="%s">%s</a></p>` .Permalink $text | safeHTML }}
+
+                    {{ $content = print $content $footer }}
+                {{ end }}
+
+                {{ if not $content }}
+                    {{ $content = markdownify .Description }}
+                {{ end }}
+
+                {{ with partial "paige/func-authors.html" . }}
+                    {{ range . }}
+                        <author>
+                            {{ with .Params.paige.author.email }}
+                                <email>{{ . }}</email>
+                            {{ end }}
+
+                            {{ with .Params.paige.author.name | default (.Title | markdownify | plainify | htmlUnescape) }}
+                                <name>{{ . }}</name>
+                            {{ end }}
+
+                            {{ with .Params.paige.author.url }}
+                                <uri>{{ . }}</uri>
+                            {{ end }}
+                        </author>
+                    {{ end }}
+                {{ end }}
+
+                {{ with $content }}
+                    <content type="html"><![CDATA[{{ . }}]]></content>
+                {{ end }}
+
+                {{ with $id }}
+                    <id>{{ . }}</id>
+                {{ end }}
+
+                {{ range .OutputFormats }}
+                    {{ $kind := not (hasSuffix .Permalink "/paige-search.json") }}
+                    {{ $rel := cond (eq .Rel "canonical") "self" .Rel }}
+
+                    {{ $href := cond (and (eq $rel "alternate") (eq .MediaType.Type "text/html")) $link .Permalink }}
+                    {{ $valid := in (slice "alternate" "enclosure" "related" "self" "via") $rel }}
+
+                    {{ if and $kind $valid }}
+                        <link href="{{ $href }}" hreflang="{{ $subpage.Language.LanguageCode }}" rel="{{ $rel }}" type="{{ .MediaType }}"/>
+                    {{ end }}
+                {{ end }}
+
+                {{ range $t := .Translations }}
+                    {{ range .OutputFormats }}
+                        {{ $kind := not (hasSuffix .Permalink "/paige-search.json") }}
+                        {{ $valid := in (slice "alternate" "enclosure" "related" "self" "via") .Rel }}
+
+                        {{ if and $kind $valid }}
+                            <link href="{{ .Permalink }}" hreflang="{{ $t.Language.LanguageCode }}" rel="{{ .Rel }}" type="{{ .MediaType }}"/>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+
+                {{ with $published }}
+                    <published>{{ . }}</published>
+                {{ end }}
+
+                {{ with $rights }}
+                    <rights type="html"><![CDATA[{{ . }}]]></rights>
+                {{ end }}
+
+                {{ with $summary }}
+                    <summary type="html"><![CDATA[{{ . }}]]></summary>
+                {{ end }}
+
+                {{ with $title }}
+                    <title type="html"><![CDATA[{{ . }}]]></title>
+                {{ end }}
+
+                {{ with $lastmod }}
+                    <updated>{{ . }}</updated>
+                {{ end }}
+            </entry>
+        {{ end }}
+    {{ end }}
+</feed>
