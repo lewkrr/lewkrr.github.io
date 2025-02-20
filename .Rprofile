@@ -19,8 +19,5 @@ options(
   blogdown.method = 'markdown'
 )
 
-options(blogdown.author = "Luke Klein")
-options(blogdown.ext = ".Rmd")
-
 # fix Hugo version
 options(blogdown.hugo.version = "0.144.2")

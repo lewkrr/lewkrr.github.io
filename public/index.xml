@@ -1,94 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Luke Kleinn</title>
-        <link>//localhost:4321/</link>
-        <description>Latest blog posts from Luke Kleinn</description>
-
-        
-        <language>en-US</language>
-        
-
-        
-
-        
-
-        
-
-        
-        <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
-        
-
-        
-        <atom:link href="//localhost:4321/index.xml" rel="self" type="application/rss+xml" />
-        
-
-        
-            
-        <item>
-          <title>Test post 250219</title>
-          <link>//localhost:4321/2025/02/19/test-post-250219/</link>
-          <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-          
-          <guid>//localhost:4321/2025/02/19/test-post-250219/</guid>
-          <description></description>
-        </item>
-            
-        <item>
-          <title>Hello R Markdown!</title>
-          <link>//localhost:4321/2020/12/01/hello-r-markdown/</link>
-          <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-          
-          <guid>//localhost:4321/2020/12/01/hello-r-markdown/</guid>
-          <description><h1 id="r-markdown">R Markdown</h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</p>
-<p>You can embed an R code chunk like this:</p>
-<pre><code class="language-r">summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-</code></pre>
-<pre><code class="language-r">fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932
-</code></pre>
-<h1 id="including-plots">Including Plots</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p></description>
-        </item>
-            
-        <item>
-          <title>A Plain Markdown Post</title>
-          <link>//localhost:4321/2016/12/30/a-plain-markdown-post/</link>
-          <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
-          
-          <guid>//localhost:4321/2016/12/30/a-plain-markdown-post/</guid>
-          <description><p>This is a post written in plain Markdown (<code>*.md</code>) instead of R Markdown (<code>*.Rmd</code>). The major differences are:</p>
-<ol>
-<li>You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (<code>```{r}</code>);</li>
-<li>A plain Markdown post is rendered through <a href="https://gohugo.io/overview/configuration/">Blackfriday</a>, and an R Markdown document is compiled by <a href="http://rmarkdown.rstudio.com"><strong>rmarkdown</strong></a> and <a href="http://pandoc.org">Pandoc</a>.</li>
-</ol>
-<p>There are many differences in syntax between Blackfriday&rsquo;s Markdown and Pandoc&rsquo;s Markdown. For example, you can write a task list with Blackfriday but not with Pandoc:</p></description>
-        </item>
-            
-        <item>
-          <title>Lorem Ipsum</title>
-          <link>//localhost:4321/2015/01/01/lorem-ipsum/</link>
-          <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
-          
-          <guid>//localhost:4321/2015/01/01/lorem-ipsum/</guid>
-          <description><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <em>magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-        </item>
-            
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Luke Klein</title><link>http://localhost:4321/</link><description>Recent content on Luke Klein</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 15 Apr 2021 23:39:49 +0530</lastBuildDate><atom:link href="http://localhost:4321/index.xml" rel="self" type="application/rss+xml"/><item><title>Theme Documentation - Basics</title><link>http://localhost:4321/posts/theme-documentation-basics/</link><pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate><guid>http://localhost:4321/posts/theme-documentation-basics/</guid><description>&lt;p>Gokarna is an opinionated theme with a focus on minimalism and simplicity.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>Follow these steps to initialize your new website.&lt;/p>
+&lt;p>If you are new to &lt;a href="https://gohugo.io/">Hugo&lt;/a>, we suggest following this &lt;a href="https://gohugo.io/getting-started/quick-start/">great documentation for beginners&lt;/a>.&lt;/p>
+&lt;h3 id="create-your-project">a. Create Your Project&lt;/h3>
+&lt;p>Hugo provides a &lt;code>new&lt;/code> subcommand to create a new website:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new site my-website
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd my-website
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-the-theme">b. Install the Theme&lt;/h3>
+&lt;p>The theme&amp;rsquo;s repository is: &lt;a href="https://github.com/gokarna-theme/gokarna-hugo">https://github.com/gokarna-theme/gokarna-hugo&lt;/a>.&lt;/p>
+&lt;p>Make this repository a submodule of your Git project:&lt;/p></description></item><item><title>Theme Documentation - Advanced</title><link>http://localhost:4321/posts/theme-documentation-advanced/</link><pubDate>Wed, 06 May 2020 21:29:01 +0800</pubDate><guid>http://localhost:4321/posts/theme-documentation-advanced/</guid><description>&lt;p>Gokarna is an opinionated theme with a focus on minimalism and simplicity.&lt;/p>
+&lt;h2 id="content-types">Content Types&lt;/h2>
+&lt;p>This theme supports two types of content types: &lt;code>post&lt;/code> and &lt;code>page&lt;/code>. To specify them, you need to add them in your markdown metadata.&lt;/p>
+&lt;h3 id="post">Post&lt;/h3>
+&lt;p>This is the default blog post type which will be shown in your &amp;ldquo;Posts&amp;rdquo; section and who&amp;rsquo;s tags will be indexed. Basically, a normal blog post.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>title: &amp;#34;Hello, world!&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>date: 2021-01-01
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>description: &amp;#34;A blog post&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>image: &amp;#34;/path/to/image.png&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>type: &amp;#34;post&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tags: [&amp;#34;blog&amp;#34;]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Hello World!
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>This is my blog.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="page">Page&lt;/h3>
+&lt;p>We introduced this type to distinguish between blog posts and normal markdown pages. The reason to create this was to give the user complete freedom in creating their website. You can use this to create a portfolio of your projects or showcase your designs. The possibilites are endless and the choice is yours.&lt;/p></description></item><item><title>Markdown Syntax Guide</title><link>http://localhost:4321/posts/markdown-syntax/</link><pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate><guid>http://localhost:4321/posts/markdown-syntax/</guid><description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p>
+&lt;h1 id="headings">Headings&lt;/h1>
+&lt;p>The following HTML &lt;code>&amp;lt;h1&amp;gt;&lt;/code>—&lt;code>&amp;lt;h6&amp;gt;&lt;/code> elements represent six levels of section headings. &lt;code>&amp;lt;h1&amp;gt;&lt;/code> is the highest section level while &lt;code>&amp;lt;h6&amp;gt;&lt;/code> is the lowest.&lt;/p>
+&lt;h1 id="h1">H1&lt;/h1>
+&lt;h2 id="h2">H2&lt;/h2>
+&lt;h3 id="h3">H3&lt;/h3>
+&lt;h4 id="h4">H4&lt;/h4>
+&lt;h5 id="h5">H5&lt;/h5>
+&lt;h6 id="h6">H6&lt;/h6>
+&lt;h2 id="paragraph">Paragraph&lt;/h2>
+&lt;p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p></description></item><item><title>Emoji Support</title><link>http://localhost:4321/posts/emoji-support/</link><pubDate>Thu, 01 Oct 2020 17:55:28 +0800</pubDate><guid>http://localhost:4321/posts/emoji-support/</guid><description>&lt;p>Emoji can be enabled in a Hugo project in a number of ways.&lt;/p>
+&lt;p>The &lt;a href="https://gohugo.io/functions/emojify/">&lt;code>emojify&lt;/code>&lt;/a> function can be called directly in templates or &lt;a href="https://gohugo.io/templates/shortcode-templates#inline-shortcodes">Inline Shortcodes&lt;/a>.&lt;/p>
+&lt;p>To enable emoji globally, set &lt;code>enableEmoji&lt;/code> to &lt;code>true&lt;/code> in your &lt;a href="https://gohugo.io/getting-started/configuration/">site configuration&lt;/a> and then you can type emoji shorthand codes directly in content files.&lt;/p>
+&lt;p>These begin and end with a &lt;strong>colon&lt;/strong> and include the &lt;strong>code&lt;/strong> of an emoji:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>Gone camping! {?:}tent: Be back soon.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>That is so funny! {?:}joy:
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The rendered output looks like this:&lt;/p></description></item><item><title>Lorem Ipsum</title><link>http://localhost:4321/posts/lorem-ipsum/</link><pubDate>Thu, 15 Apr 2021 23:39:49 +0530</pubDate><guid>http://localhost:4321/posts/lorem-ipsum/</guid><description>&lt;h1 id="heading-1">Heading 1&lt;/h1>
+&lt;p>&amp;ldquo;Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;rdquo;&lt;/p></description></item><item><title>Hello R Markdown</title><link>http://localhost:4321/posts/2020-12-01-r-rmarkdown/</link><pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate><guid>http://localhost:4321/posts/2020-12-01-r-rmarkdown/</guid><description>&lt;h1 id="r-markdown">R Markdown&lt;/h1>
+&lt;p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com&lt;/a>.&lt;/p>
+&lt;p>You can embed an R code chunk like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">summary&lt;/span>(cars)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## speed dist &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Min. : 4.0 Min. : 2.00 &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## 1st Qu.:12.0 1st Qu.: 26.00 &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Median :15.0 Median : 36.00 &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Mean :15.4 Mean : 42.98 &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## 3rd Qu.:19.0 3rd Qu.: 56.00 &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Max. :25.0 Max. :120.00&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>fit &lt;span style="color:#f92672">&amp;lt;-&lt;/span> &lt;span style="color:#a6e22e">lm&lt;/span>(dist &lt;span style="color:#f92672">~&lt;/span> speed, data &lt;span style="color:#f92672">=&lt;/span> cars)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Call:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## lm(formula = dist ~ speed, data = cars)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Coefficients:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## (Intercept) speed &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## -17.579 3.932&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="including-plots">Including Plots&lt;/h1>
+&lt;p>You can also embed plots. See Figure &lt;!-- raw HTML omitted -->1&lt;!-- raw HTML omitted --> for example:&lt;/p></description></item><item><title>Blüdhaven</title><link>http://localhost:4321/projects/bludhaven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:4321/projects/bludhaven/</guid><description>&lt;h2 id="history">History&lt;/h2>
+&lt;p>Blüdhaven was a former whaling town, which was officially incorporated as a &amp;ldquo;Commonwealth&amp;rdquo; in 1912. The town had a generally poor socio-economic populace, owing in part to failed efforts to transform itself into a manufacturing and shipping center.&lt;/p></description></item><item><title>Hydra</title><link>http://localhost:4321/projects/hydra/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:4321/projects/hydra/</guid><description>&lt;h2 id="motto">Motto&lt;/h2>
+&lt;p>Cut off one head, and two will take their place.&lt;/p></description></item><item><title>Tatooine</title><link>http://localhost:4321/projects/tatooine/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:4321/projects/tatooine/</guid><description>&lt;h2 id="a-long-time-ago-in-a-galaxy-far-far-away">A long time ago in a galaxy far, far away&amp;hellip;.&lt;/h2>
+&lt;p>A project was planned, but never completed.&lt;/p></description></item></channel></rss>
